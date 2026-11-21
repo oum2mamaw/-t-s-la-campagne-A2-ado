@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche FLE A2.1 – Mes étés à la campagne</title>
+<style>
+  :root{
+    --bg:#faf7f2; --card:#ffffff; --ink:#2b2b2b; --muted:#6b6b6b;
+    --accent:#2f7d6d; --accent-soft:#e3f1ed; --warm:#e8a33d; --warm-soft:#fdf2dc;
+    --ok:#2e8b57; --ok-bg:#e6f5ec; --ko:#c0392b; --ko-bg:#fbeaea; --line:#e2dccf;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+  header{background:var(--accent);color:#fff;padding:28px 20px;text-align:center}
+  header h1{margin:0 0 6px;font-size:1.7rem}
+  header p{margin:0;opacity:.9}
+  main{max-width:880px;margin:0 auto;padding:20px 16px 60px}
+  nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0}
+  nav a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--accent);text-decoration:none;font-size:.9rem;font-weight:600}
+  nav a:hover{background:var(--accent-soft)}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin:22px 0;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  h2{margin-top:0;color:var(--accent);font-size:1.35rem;border-bottom:2px solid var(--accent-soft);padding-bottom:8px}
+  h3{margin:22px 0 8px;font-size:1.1rem}
+  .consigne{background:var(--warm-soft);border-left:4px solid var(--warm);padding:8px 12px;border-radius:6px;font-size:.95rem;margin:10px 0 14px}
+  .texte{background:#fffdf7;border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:1.05rem}
+  .texte h3{margin-top:0;text-align:center;color:var(--accent)}
+  .texte p{margin:.6em 0}
+  .lex{border-bottom:2px dotted var(--warm);font-weight:600;cursor:help}
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:var(--accent-soft);color:var(--accent)}
+  td:first-child{font-weight:700;white-space:nowrap}
+  .banque{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+  .banque span{background:var(--accent-soft);color:var(--accent);padding:3px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
+  ol.items{padding-left:22px}
+  ol.items li{margin:10px 0}
+  input.fill,select{font:inherit;padding:3px 8px;border:2px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+  input.fill{width:9.5em;text-align:center}
+  input.fill.long{width:12.5em}
+  input.fill.short{width:6.5em}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  .ok{border-color:var(--ok)!important;background:var(--ok-bg)!important}
+  .ko{border-color:var(--ko)!important;background:var(--ko-bg)!important}
+  .inf{color:var(--muted);font-size:.9rem}
+  .note{display:block;color:var(--muted);font-size:.88rem;margin-top:2px}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+  button{font:inherit;cursor:pointer;border:none;border-radius:8px;padding:8px 16px;font-weight:600}
+  .btn-check{background:var(--accent);color:#fff}
+  .btn-show{background:var(--warm);color:#3a2a00}
+  .btn-reset{background:#ece7dc;color:var(--ink)}
+  button:hover{filter:brightness(1.06)}
+  .score{font-weight:700;color:var(--accent);margin-left:auto}
+  textarea{width:100%;min-height:70px;font:inherit;padding:8px 10px;border:2px solid var(--line);border-radius:8px;margin-top:6px;resize:vertical}
+  details{margin-top:6px}
+  summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.92rem}
+  details p{background:var(--ok-bg);border-radius:8px;padding:8px 12px;margin:6px 0}
+  .temps-table td:first-child{white-space:normal}
+  .ctx{color:var(--muted);font-size:.9rem}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
+  @media print{
+    nav,.actions,header p{display:none}
+    body{background:#fff}
+    section.card{box-shadow:none;break-inside:avoid}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    td:first-child{white-space:normal}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mes étés à la campagne</h1>
+  <p>Fiche interactive de FLE · Niveau A2.1 · Le passé composé et l'imparfait</p>
+</header>
+
+<main>
+
+<nav>
+  <a href="#texte">📖 Texte</a>
+  <a href="#lexique">🔤 Lexique</a>
+  <a href="#comprehension">✅ Compréhension</a>
+  <a href="#temps">🕰️ Repérage des temps</a>
+  <a href="#grammaire">✏️ Grammaire</a>
+  <a href="#production">💬 Production</a>
+</nav>
+
+<!-- ============ TEXTE ============ -->
+<section class="card" id="texte">
+  <h2>📖 Lis le texte</h2>
+  <div class="texte">
+    <h3>Mon blog d'ado : mes étés à la campagne</h3>
+    <p>Quand j'étais petite, je passais chaque été chez mes grands-parents. Ils habitaient dans un <span class="lex">village</span> très calme. Le matin, je me levais tôt et je donnais à manger aux <span class="lex">poules</span>. L'après-midi, je jouais au ballon avec mon cousin et regardais mon grand-père <span class="lex">s'occuper du potager</span> et du jardin. Un jour, j'ai perdu une <span class="lex">boucle d'oreille</span> entre les fleurs !</p>
+    <p><span class="lex">À cette époque</span> j'étais très <span class="lex">rêveuse</span> et <span class="lex">réservée</span>. Je croyais qu'on pouvait monter sur les <span class="lex">nuages</span> et voyager dessus, et j'<span class="lex">avais honte</span> de parler avec les enfants du village.</p>
+    <p>Maintenant, c'est différent : j'ai quinze ans et je ne joue plus aux mêmes jeux. Avant, j'étais timide, mais aujourd'hui, je suis plus <span class="lex">sûre de moi</span> et j'ai beaucoup d'amis au collège. <span class="lex">Comme autrefois</span>, j'adore les gâteaux de ma grand-mère. <span class="lex">Cependant</span>, je ne sais <span class="lex">toujours</span> pas si on peut toucher un nuage.</p>
+    <p>Depuis cet été-là, j'aime beaucoup la nature !</p>
+  </div>
+  <p class="inf">💡 Les mots soulignés en pointillés sont expliqués dans le lexique.</p>
+</section>
+
+<!-- ============ LEXIQUE ============ -->
+<section class="card" id="lexique">
+  <h2>🔤 Lexique</h2>
+  <table>
+    <tr><th>Mot / expression</th><th>Explication simple</th><th>Exemple</th></tr>
+    <tr><td>un village</td><td>Une très petite ville à la campagne.</td><td>Mon village a 300 habitants.</td></tr>
+    <tr><td>une poule</td><td>Un animal de la ferme qui donne des œufs.</td><td>Les poules mangent du maïs.</td></tr>
+    <tr><td>un potager</td><td>Un jardin où on cultive des légumes.</td><td>Il y a des tomates dans le potager.</td></tr>
+    <tr><td>s'occuper de</td><td>Faire attention à quelqu'un ou à quelque chose, le soigner.</td><td>Je m'occupe de mon chien.</td></tr>
+    <tr><td>une boucle d'oreille</td><td>Un bijou qu'on met à l'oreille.</td><td>Elle porte des boucles d'oreille rouges.</td></tr>
+    <tr><td>à cette époque</td><td>À ce moment du passé.</td><td>À cette époque, je n'avais pas de téléphone.</td></tr>
+    <tr><td>rêveuse (rêveur)</td><td>Une personne qui pense beaucoup à des choses imaginaires.</td><td>Ma sœur est rêveuse : elle regarde les nuages.</td></tr>
+    <tr><td>réservée (réservé)</td><td>Une personne qui parle peu, un peu timide.</td><td>Il est réservé avec les inconnus.</td></tr>
+    <tr><td>un nuage</td><td>Une masse blanche ou grise dans le ciel.</td><td>Aujourd'hui, il y a beaucoup de nuages.</td></tr>
+    <tr><td>avoir honte</td><td>Se sentir mal, gêné, devant les autres.</td><td>J'ai honte de parler en public.</td></tr>
+    <tr><td>sûre de moi</td><td>Avoir confiance en soi.</td><td>Elle est sûre d'elle à l'examen.</td></tr>
+    <tr><td>autrefois</td><td>Dans le passé (= avant).</td><td>Autrefois, on écrivait des lettres.</td></tr>
+    <tr><td>cependant</td><td>Mais (pour montrer une opposition).</td><td>Il pleut ; cependant, nous sortons.</td></tr>
+    <tr><td>ne… toujours pas</td><td>Ce n'est pas encore arrivé, même maintenant.</td><td>Je ne comprends toujours pas.</td></tr>
+  </table>
+
+  <h3>Mini-exercice de vocabulaire</h3>
+  <div class="consigne">Complète les phrases avec un mot de la banque. <em>(Attention : écris le mot avec son article si besoin.)</em></div>
+  <div class="ex" data-ex>
+    <div class="banque"><span>potager</span><span>nuages</span><span>poules</span><span>honte</span><span>boucle d'oreille</span></div>
+    <ol class="items">
+      <li>Mon grand-père cultive des carottes dans son <input class="fill" data-answer="potager" autocomplete="off">.</li>
+      <li>Le matin, je donne du maïs aux <input class="fill" data-answer="poules" autocomplete="off">.</li>
+      <li>Ce soir, le ciel est gris : il y a beaucoup de <input class="fill" data-answer="nuages" autocomplete="off">.</li>
+      <li>Elle a perdu une <input class="fill long" data-answer="boucle d'oreille" autocomplete="off"> dans le jardin.</li>
+      <li>J'ai <input class="fill short" data-answer="honte" autocomplete="off"> de chanter devant la classe.</li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPRÉHENSION ============ -->
+<section class="card" id="comprehension">
+  <h2>✅ Compréhension du texte</h2>
+
+  <h3>1. Vrai ou faux ?</h3>
+  <div class="consigne">Choisis « Vrai » ou « Faux » pour chaque phrase.</div>
+  <div class="ex" data-ex>
+    <ol class="items">
+      <li>La narratrice passait ses étés chez ses grands-parents.
+        <select data-answer="Vrai"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Le village était très animé.
+        <select data-answer="Faux"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Elle jouait au ballon avec sa cousine.
+        <select data-answer="Faux"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Un jour, elle a perdu un chapeau.
+        <select data-answer="Faux"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Quand elle était petite, elle croyait qu'on pouvait voyager sur les nuages.
+        <select data-answer="Vrai"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Aujourd'hui, elle a peu d'amis au collège.
+        <select data-answer="Faux"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+      <li>Elle aime toujours les gâteaux de sa grand-mère.
+        <select data-answer="Vrai"><option value="">…</option><option>Vrai</option><option>Faux</option></select></li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+
+  <h3>2. Réponds aux questions</h3>
+  <div class="consigne">Écris une réponse courte avec tes propres mots. Ensuite, compare avec la réponse possible.</div>
+  <ol class="items">
+    <li>Où passait-elle ses étés ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Elle passait ses étés chez ses grands-parents, dans un village très calme.</p></details></li>
+    <li>Que faisait-elle le matin ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Le matin, elle se levait tôt et elle donnait à manger aux poules.</p></details></li>
+    <li>Qu'est-ce qu'elle a perdu un jour ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Elle a perdu une boucle d'oreille entre les fleurs.</p></details></li>
+    <li>Comment était-elle à cette époque ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Elle était très rêveuse et réservée. Elle avait honte de parler avec les enfants du village.</p></details></li>
+    <li>Qu'est-ce qui a changé aujourd'hui ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Aujourd'hui, elle est plus sûre d'elle, elle a beaucoup d'amis au collège et elle ne joue plus aux mêmes jeux.</p></details></li>
+    <li>Qu'est-ce qui n'a pas changé ?
+      <textarea placeholder="Écris ta réponse ici…"></textarea>
+      <details><summary>Voir une réponse possible</summary><p>Elle adore toujours les gâteaux de sa grand-mère et elle ne sait toujours pas si on peut toucher un nuage.</p></details></li>
+  </ol>
+</section>
+
+<!-- ============ REPÉRAGE DES TEMPS ============ -->
+<section class="card" id="temps">
+  <h2>🕰️ Repérage des temps</h2>
+  <div class="consigne">Pour chaque verbe du texte, choisis le temps : <strong>présent</strong>, <strong>imparfait</strong> ou <strong>passé composé</strong>.</div>
+  <div class="ex" data-ex>
+    <table class="temps-table">
+      <tr><th>Verbe dans le texte</th><th>Temps</th></tr>
+      <tr><td>« je <strong>passais</strong> chaque été »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« ils <strong>habitaient</strong> dans un village »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« je me <strong>levais</strong> tôt »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>ai perdu</strong> une boucle d'oreille »</td><td><select data-answer="passé composé"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>étais</strong> très rêveuse »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« je <strong>croyais</strong> qu'on pouvait monter sur les nuages »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>avais</strong> honte de parler »</td><td><select data-answer="imparfait"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« c'<strong>est</strong> différent »</td><td><select data-answer="présent"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>ai</strong> quinze ans »</td><td><select data-answer="présent"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« je ne <strong>joue</strong> plus aux mêmes jeux »</td><td><select data-answer="présent"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>ai</strong> beaucoup d'amis au collège »</td><td><select data-answer="présent"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+      <tr><td>« j'<strong>aime</strong> beaucoup la nature »</td><td><select data-answer="présent"><option value="">…</option><option>présent</option><option>imparfait</option><option>passé composé</option></select></td></tr>
+    </table>
+    <p class="inf">💡 Attention : « j'ai perdu » (passé composé) et « j'ai quinze ans » (présent) commencent de la même façon !</p>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+
+  <h3>Pourquoi l'imparfait ? Pourquoi le passé composé ?</h3>
+  <table>
+    <tr><th>Imparfait</th><th>Passé composé</th></tr>
+    <tr><td style="white-space:normal;font-weight:400">Une <strong>habitude</strong> dans le passé<br><em>Je passais chaque été chez mes grands-parents.</em></td><td>Une <strong>action précise</strong> terminée<br><em>Un jour, j'ai perdu une boucle d'oreille.</em></td></tr>
+    <tr><td style="white-space:normal;font-weight:400">Une <strong>description</strong> (état, personnalité)<br><em>J'étais très rêveuse.</em></td><td>Un événement <strong>ponctuel</strong> (« un jour », « hier », « soudain »)<br><em>Hier, j'ai mangé un gâteau.</em></td></tr>
+  </table>
+</section>
+
+<!-- ============ GRAMMAIRE ============ -->
+<section class="card" id="grammaire">
+  <h2>✏️ Grammaire : l'imparfait et le passé composé</h2>
+
+  <h3>Exercice 1 – Conjugue à l'imparfait</h3>
+  <div class="consigne">Écris le verbe entre parenthèses à l'imparfait. <span class="inf">Rappel : radical de « nous » au présent + -ais, -ais, -ait, -ions, -iez, -aient.</span></div>
+  <div class="ex" data-ex>
+    <ol class="items">
+      <li>Quand j'<input class="fill short" data-answer="étais" autocomplete="off"> <span class="inf">(être)</span> petite, je <input class="fill short" data-answer="allais" autocomplete="off"> <span class="inf">(aller)</span> chez mes grands-parents.</li>
+      <li>Le matin, nous nous <input class="fill short" data-answer="levions" autocomplete="off"> <span class="inf">(lever)</span> tôt.</li>
+      <li>Mon cousin <input class="fill short" data-answer="avait" autocomplete="off"> <span class="inf">(avoir)</span> un ballon rouge.</li>
+      <li>Les enfants <input class="fill" data-answer="jouaient" autocomplete="off"> <span class="inf">(jouer)</span> dans le jardin.</li>
+      <li>Vous <input class="fill" data-answer="regardiez" autocomplete="off"> <span class="inf">(regarder)</span> le potager.</li>
+      <li>Tu <input class="fill" data-answer="croyais" autocomplete="off"> <span class="inf">(croire)</span> aux fées ?</li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+
+  <h3>Exercice 2 – Conjugue au passé composé</h3>
+  <div class="consigne">Écris le verbe entre parenthèses au passé composé (auxiliaire + participe passé). <span class="inf">Attention à « être » ou « avoir » !</span></div>
+  <div class="ex" data-ex>
+    <ol class="items">
+      <li>Hier, j'<input class="fill" data-answer="ai perdu" autocomplete="off"> <span class="inf">(perdre)</span> mon téléphone.</li>
+      <li>Elle <input class="fill" data-answer="est arrivée" autocomplete="off"> <span class="inf">(arriver)</span> au village samedi.</li>
+      <li>Nous <input class="fill" data-answer="avons mangé" autocomplete="off"> <span class="inf">(manger)</span> le gâteau de ma grand-mère.</li>
+      <li>Ils <input class="fill" data-answer="ont vu" autocomplete="off"> <span class="inf">(voir)</span> un cheval dans le champ.</li>
+      <li>Tu <input class="fill" data-answer="as fini" autocomplete="off"> <span class="inf">(finir)</span> tes devoirs ?</li>
+      <li>Un jour, je <input class="fill" data-answer="suis tombé|suis tombée" autocomplete="off"> <span class="inf">(tomber)</span> dans la rivière.</li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+
+  <h3>Exercice 3 – Imparfait ou passé composé ?</h3>
+  <div class="consigne">Choisis la bonne forme.</div>
+  <div class="ex" data-ex>
+    <ol class="items">
+      <li>Quand j'étais petite, je
+        <select data-answer="jouais"><option value="">…</option><option>ai joué</option><option>jouais</option></select>
+        tous les jours dans le jardin.</li>
+      <li>Un jour, mon grand-père
+        <select data-answer="a trouvé"><option value="">…</option><option>a trouvé</option><option>trouvait</option></select>
+        ma boucle d'oreille.</li>
+      <li>Il
+        <select data-answer="faisait"><option value="">…</option><option>a fait</option><option>faisait</option></select>
+        beau et le village
+        <select data-answer="était"><option value="">…</option><option>était</option><option>a été</option></select>
+        très calme.</li>
+      <li>Soudain, j'
+        <select data-answer="ai entendu"><option value="">…</option><option>entendais</option><option>ai entendu</option></select>
+        un bruit dans le jardin.</li>
+      <li>À cette époque, j'
+        <select data-answer="avais"><option value="">…</option><option>ai eu</option><option>avais</option></select>
+        honte de parler avec les enfants.</li>
+      <li>Chaque matin, ma grand-mère
+        <select data-answer="préparait"><option value="">…</option><option>a préparé</option><option>préparait</option></select>
+        le petit-déjeuner.</li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+
+  <h3>Exercice 4 – Comparer le passé et le présent</h3>
+  <div class="consigne">Complète avec un mot de la banque pour comparer avant et maintenant.</div>
+  <div class="ex" data-ex>
+    <div class="banque"><span>avant</span><span>aujourd'hui</span><span>plus</span><span>depuis</span><span>autrefois</span><span>toujours</span></div>
+    <ol class="items">
+      <li><input class="fill short" data-answer="Avant|Autrefois" autocomplete="off">, je jouais au ballon tous les jours. Maintenant, je joue au basket.</li>
+      <li>Avant, j'étais timide, mais <input class="fill" data-answer="aujourd'hui|maintenant" autocomplete="off">, je suis plus sûre de moi.</li>
+      <li>Je ne joue <input class="fill short" data-answer="plus" autocomplete="off"> aux mêmes jeux.</li>
+      <li><input class="fill short" data-answer="Depuis" autocomplete="off"> cet été-là, j'aime beaucoup la nature.</li>
+      <li>Comme <input class="fill" data-answer="autrefois|avant" autocomplete="off">, j'adore les gâteaux de ma grand-mère.</li>
+      <li>Je ne sais <input class="fill" data-answer="toujours" autocomplete="off"> pas si on peut toucher un nuage.</li>
+    </ol>
+    <div class="actions">
+      <button class="btn-check">Vérifier</button><button class="btn-show">Voir le corrigé</button><button class="btn-reset">Recommencer</button><span class="score"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTION ============ -->
+<section class="card" id="production">
+  <h2>💬 À ton tour d'écrire !</h2>
+  <div class="consigne">Écris 5 ou 6 phrases pour ton blog. Compare ta vie <strong>quand tu étais petit(e)</strong> et <strong>aujourd'hui</strong>.</div>
+  <p class="inf">Utilise : <em>quand j'étais petit(e)… · avant… mais maintenant… · je ne… plus · un jour, j'ai… · comme avant… · depuis…</em></p>
+  <label for="prenom"><strong>Ton prénom :</strong></label>
+  <input id="prenom" class="fill long" type="text" autocomplete="off" placeholder="Ton prénom">
+  <textarea id="production-texte" style="min-height:140px" placeholder="Quand j'étais petit(e), je…"></textarea>
+  <div class="actions">
+    <button class="btn-check" id="btn-download" type="button">⬇️ Télécharger ma réponse</button>
+    <span id="download-msg" class="score"></span>
+  </div>
+  <p class="consigne">📩 <strong>N'oublie pas :</strong> après avoir téléchargé ton texte, partage-le avec ton enseignant(e) pour recevoir ses commentaires !</p>
+</section>
+
+<footer>Fiche FLE · A2.1 (CECRL) · Les réponses attendues respectent l'orthographe et les accents.</footer>
+</main>
+
+<script>
+  function norm(s){
+    return (s || "").toLowerCase().replace(/[’‘`´]/g, "'").replace(/\s+/g, " ").trim();
+  }
+  document.querySelectorAll(".ex").forEach(function(ex){
+    var items  = Array.prototype.slice.call(ex.querySelectorAll("[data-answer]"));
+    var score  = ex.querySelector(".score");
+    var notes  = ex.querySelectorAll(".note");
+
+    ex.querySelector(".btn-check").addEventListener("click", function(){
+      var ok = 0;
+      items.forEach(function(el){
+        var alts = el.dataset.answer.split("|").map(norm);
+        var good = alts.indexOf(norm(el.value)) !== -1;
+        el.classList.toggle("ok", good);
+        el.classList.toggle("ko", !good);
+        if (good) ok++;
+      });
+      var msg = "Score : " + ok + " / " + items.length;
+      if (ok === items.length) msg += " 🎉 Bravo !";
+      score.textContent = msg;
+    });
+
+    ex.querySelector(".btn-show").addEventListener("click", function(){
+      items.forEach(function(el){
+        el.value = el.dataset.answer.split("|")[0];
+        el.classList.remove("ko");
+        el.classList.add("ok");
+      });
+      notes.forEach(function(n){ n.hidden = false; });
+      score.textContent = "Corrigé affiché";
+    });
+
+    ex.querySelector(".btn-reset").addEventListener("click", function(){
+      items.forEach(function(el){
+        if (el.tagName === "SELECT") el.selectedIndex = 0; else el.value = "";
+        el.classList.remove("ok", "ko");
+      });
+      notes.forEach(function(n){ n.hidden = true; });
+      score.textContent = "";
+    });
+  });
+
+  document.getElementById("btn-download").addEventListener("click", function(){
+    var texte = document.getElementById("production-texte").value.trim();
+    var prenom = document.getElementById("prenom").value.trim();
+    var msg = document.getElementById("download-msg");
+    if (!texte) { msg.textContent = "✏️ Écris d'abord ton texte."; return; }
+    var contenu = "Mon blog d'ado : mes étés à la campagne\n" +
+                  "Élève : " + (prenom || "(sans nom)") + "\n\n" + texte + "\n";
+    var blob = new Blob(["\uFEFF" + contenu], {type: "text/plain;charset=utf-8"});
+    var nom = "mon_texte_" + (prenom ? prenom.toLowerCase().replace(/[^a-z0-9àâçéèêëîïôûùüÿœ]+/gi, "_") : "eleve") + ".txt";
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = nom;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+    msg.textContent = "✅ Fichier téléchargé : " + nom + " — partage-le avec ton enseignant(e) !";
+  });
+</script>
+</body>
+</html>
